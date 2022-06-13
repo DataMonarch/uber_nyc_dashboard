@@ -11,7 +11,6 @@ st.set_page_config(layout="wide", page_title="NYC Uber Ridesharing", page_icon="
 def load_data():
 
     data = pd.read_csv("uber-raw-data-sep14.csv",
-    nrows=100000,
     names=["date/time", "lat", "lon"],
     skiprows=1,
     usecols=[0, 1, 2],
@@ -90,8 +89,8 @@ with row1_2:
     st.write(
         """
     ##
-    Examining how Uber pickups vary over time in New York City's and at its major regional airports.
-    By sliding the slider on the left you can view different slices of time and explore different transportation trends.
+    Examining how Uber pickups varied on average throughout the day during September of 2014 in New York City and at its major regional airports.
+    By sliding the slider you can view different 1-hour time windows and explore different transportation trends.
     """
     )
 
