@@ -12,6 +12,7 @@ def load_data():
 
     data = pd.read_csv("uber-raw-data-sep14.csv",
     names=["date/time", "lat", "lon"],
+    nrows=200000,
     skiprows=1,
     usecols=[0, 1, 2],
     parse_dates=["date/time"])
